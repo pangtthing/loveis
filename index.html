@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>천국의 계단</title>
+<style>
+	html {background: url(img/night.png) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+
+
+#heartDiv {position:absolute; left:650px; top:340px;}
+#heart {width:25px;cursor:pointer;}
+
+  .step{color:white; font-weight: bold; position:absolute; animation:drop 2s forwards; opacity: 0; transition: 1s; font-size: 3em;}
+
+#loveDiv {position: absolute; left:800px; top: 150px; transition: all 1s;}
+#loveIs {position:absolute; transition:all 1s;}
+
+
+@keyframes drop{
+    from{margin-top:0; opacity:0;}
+    to{margin-top:50px; opacity:1;}
+  }
+
+
+#a0{left:10px; top:10px; color:white;}
+#a1{left:110px; top:60px; color:white;}
+#a2{left:210px; top:110px; color:white;}
+#a3{left:310px; top:160px; color:white;}
+#a4{left:410px; top:210px; color:white;}
+#a5{left:510px; top:260px; color:white;}
+#a6{left:610px; top:310px; color:white;}
+#a7{left:710px; top:360px; color:white; }
+#a8{left:810px; top:410px; color:white;}
+#a9{left:910px; top:460px; color:white;}
+#a10{left:1010px; top:510px; color:white;}
+#a11{left:1110px; top:560px; color:white;}
+#a12{left:1210px; top:610px; color:white;}
+#a13{left:1310px; top:660px; color:white;}
+
+
+ 
+
+</style>
+</head>
+
+<body>
+
+
+<div id="ice"></div>
+<div id="iceon"></div>
+
+
+<script type="text/javascript">
+    
+var text = "계단 계단 계단 계단 계단 계단 사랑 계단 계단 계단 계단 계단 계단 계단 ";
+  var k = text.split(" ");
+
+for(var i=0; i<k.length; i++){
+  var c = document.getElementById("ice");
+  var d = c.cloneNode(true);
+  d.className = "step";
+  d.id = "a"+i;
+  d.innerHTML = k[i];
+ 
+  d.style.animationDelay = i*0.2 +"s";
+  d.onclick = function(){
+    var t = document.getElementById(this.id);
+} 
+  iceon.appendChild(d);
+}
+</script>
+
+<div id="heartDiv">
+	<img src="img/heart.png" id="heart">
+</div>
+<div id="loveDiv">
+	<video id="loveIs" src="img/loveIs.mp4" type="video/mp4"
+		style="width: 0px; height: 0px; transition: all 1s"></video>
+</div>
+	<script type="text/javascript">
+	
+var toggle = "off"
+heart.onclick=function(){
+			if(toggle == "off"){
+			toggle = "on";
+				loveIs.play();
+				loveIs.style.width="500px";
+				loveIs.style.height="350px";
+				gd.pause();
+			loveIs.currentTime=0;
+			}
+			else{ 
+			toggle = "off";
+			
+			loveIs.pause();
+			loveIs.style.width="0%";
+			loveIs.style.height="0%";	
+			}
+			}	
+
+				
+
+    </script>
+</body>
+</html>
